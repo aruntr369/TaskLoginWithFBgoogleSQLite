@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TaskLogin</string>
+
+    <string name="facebook_app_id">449456336949898</string>
+    <string name="fb_login_protocol_scheme">fb449456336949898</string>
+    <string name="facebook_client_token">dcfe05518a88635277908fe730d6c034</string>
+
+
 </resources>
