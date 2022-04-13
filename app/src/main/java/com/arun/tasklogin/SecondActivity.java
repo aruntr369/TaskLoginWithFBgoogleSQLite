@@ -53,6 +53,7 @@ public class SecondActivity extends AppCompatActivity {
                 List<ItemsModel> listitems = response.body();
                 RecyAdapterSec recyAdapterSec = new RecyAdapterSec(SecondActivity.this,listitems);
                 recyclerView.setAdapter(recyAdapterSec);
+                toDetailedView();
             }
 
             @Override
@@ -71,6 +72,9 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+    }
+    void toDetailedView(){
 
     }
 }

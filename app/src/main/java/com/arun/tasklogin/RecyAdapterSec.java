@@ -1,6 +1,7 @@
 package com.arun.tasklogin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +52,13 @@ public class RecyAdapterSec extends RecyclerView.Adapter<RecyAdapterSec.ItemsVie
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                itemClickListener.onItemClicked(items);
+               // itemClickListener.onItemClicked(items);
+                Intent intent = new Intent(context,DetailedView.class);
+                intent.putExtra("image",items.getCourseimg());
+                intent.putExtra("name",items.getCourseName());
+                intent.putExtra("tracks",items.getCourseTracks());
+                intent.putExtra("mode",items.getCourseMode());
+                context.startActivity(intent);
 
             }
         });
@@ -73,7 +80,7 @@ public class RecyAdapterSec extends RecyclerView.Adapter<RecyAdapterSec.ItemsVie
             courseMode = itemView.findViewById(R.id.courseModeDet);
             courseTracks = itemView.findViewById(R.id.courseTracksDet);
             courseName = itemView.findViewById(R.id.courseNameDet);
-            cardView = itemView.findViewById(R.id.cardView);
+            cardView = itemView.findViewById(R.id.cardViewDet);
         }
     }
 

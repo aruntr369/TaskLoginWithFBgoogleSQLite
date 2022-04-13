@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SignUp">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinev10"
@@ -42,10 +42,10 @@
         app:layout_constraintGuide_percent=".35" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvEmail"
+        android:id="@+id/tvUserName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="EMAIL ADDRESS"
+        android:hint="USER NAME"
         app:boxCornerRadiusBottomEnd="18dp"
         app:boxCornerRadiusTopEnd="18dp"
         app:boxCornerRadiusBottomStart="18dp"
@@ -56,7 +56,31 @@
         app:layout_constraintTop_toTopOf="@id/guidelineh35">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvEmail1"
+            android:id="@+id/tvUserName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvEmailS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="EMAIL ADDRESS"
+        app:boxCornerRadiusBottomEnd="18dp"
+        app:boxCornerRadiusTopEnd="18dp"
+        app:boxCornerRadiusBottomStart="18dp"
+        app:boxCornerRadiusTopStart="18dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintStart_toStartOf="@id/guidelinev10"
+        app:layout_constraintEnd_toEndOf="@id/guidelinev90"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvEmailS1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName" />
@@ -64,7 +88,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvPass"
+        android:id="@+id/tvPassS"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="PASSWORD"
@@ -76,11 +100,11 @@
         app:boxCornerRadiusTopStart="18dp"
         app:layout_constraintStart_toStartOf="@id/guidelinev10"
         app:layout_constraintEnd_toEndOf="@id/guidelinev90"
-        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailS"
         android:layout_marginTop="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvPass1"
+            android:id="@+id/tvPassS1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -88,61 +112,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Log in"
-        app:layout_constraintStart_toStartOf="@id/guidelinev30"
+        android:layout_marginTop="15dp"
+        android:text="Sign Up"
         app:layout_constraintEnd_toEndOf="@id/guidelinev70"
-        app:layout_constraintTop_toBottomOf="@id/tvPass"
-        android:layout_marginTop="15dp"/>
+        app:layout_constraintStart_toStartOf="@id/guidelinev30"
+        app:layout_constraintTop_toBottomOf="@id/tvPassS" />
 
     <TextView
-        android:id="@+id/tvtoSignUp"
+        android:id="@+id/tvBackLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New user? Sign up!!!"
+        android:layout_marginTop="20dp"
+        android:text="Already have account? Login"
         android:textColor="@color/purple_500"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@id/guidelinev70"
         app:layout_constraintStart_toStartOf="@id/guidelinev30"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:id="@+id/tvLo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log In"
-        android:textStyle="bold"
-        android:textSize="40dp"
-        android:textColor="@color/purple_500"
-        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
-        app:layout_constraintEnd_toEndOf="@id/guidelinev70"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@id/guidelinev30"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/google_btn"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/google"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnfb"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/btnfb"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/fb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/google_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
