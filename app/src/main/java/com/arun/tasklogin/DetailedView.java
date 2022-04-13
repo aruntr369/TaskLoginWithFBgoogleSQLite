@@ -1,6 +1,7 @@
 package com.arun.tasklogin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class DetailedView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityDetailedViewBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_TaskLogin);
         setContentView(binding.getRoot());
 
         Intent intent =getIntent();

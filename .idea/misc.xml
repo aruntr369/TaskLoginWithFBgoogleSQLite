@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/drawable/ic_baseline_deck_24.xml" value="0.116" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/drawable/ic_baseline_insights_24.xml" value="0.116" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/drawable/splash_image.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/layout/activity_after_notification.xml" value="0.209375" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/layout/activity_detailed_view.xml" value="0.209375" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/TaskLogin/app/src/main/res/layout/activity_second.xml" value="0.209375" />

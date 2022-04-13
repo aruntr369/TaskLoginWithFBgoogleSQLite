@@ -10,15 +10,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/splashScreenTheam">
-        <activity android:name=".SignUp"/>
+        android:theme="@style/Theme.App.Starting">
+        <activity
+            android:name=".AfterNotification"
+            android:exported="false" />
+        <activity android:name=".SignUp" />
         <activity
             android:name=".DetailedView"
             android:exported="false" />
         <activity
             android:name=".SecondActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

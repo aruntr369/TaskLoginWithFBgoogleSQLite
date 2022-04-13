@@ -3,6 +3,7 @@ package com.arun.tasklogin;
 import static android.text.Html.fromHtml;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import android.app.Application;
 import android.content.Intent;
@@ -62,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SplashScreen.installSplashScreen(this);
         setTheme(R.style.Theme_TaskLogin);
+
         setContentView(R.layout.activity_main);
 
         googlelogin();
@@ -232,8 +235,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     void navigateToSecondActivity(){
-        finish();
         Intent intent = new Intent(MainActivity.this,SecondActivity.class);
         startActivity(intent);
+        finish();
     }
 }
